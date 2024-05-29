@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController ::class,'home']);
+Route::get('/', [HomeController::class,'home']);
+
 Route::get('/register', [AuthController::class,'register']);
-Route::get('/welcome', [AuthController::class,'welcome']);
+
+Route::POST('/welcome', [AuthController::class,'welcome']);
+
+Route::get('/data-tables', function(){
+    return view ('page.data-tables');
+});
+
+Route::get('/table', function(){
+    return view ('page.table');
+});

@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selamat datang</title>
-</head>
-<body>
-    <h1>Selamat Datang Adri Yatniel Manalu! <?php echo $fname; ?> <?php echo $lname; ?></h1>
-    <h3>Terima kasih telah bergabung di sanberbook. Social Media kita bersama!</h3>
+@extends('layouts.master')
 
+@section('title')
+    Selamat datang
+@endsection
 
-</body>
-</html>
+@section('content')
+
+<h1>Selamat Datang Adri Yatniel Manalu! <?php echo $fname; ?> <?php echo $lname; ?></h1>
+<h3>Terima kasih telah bergabung di sanberbook. Social Media kita bersama!</h3>
+@endsection
